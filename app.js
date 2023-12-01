@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var app = express();
 app.use(cors({
-  origin: ["http://localhost:3000", "https://fullstack-todo-app.onrender.com"]
+  origin: ["http://localhost:3000", "https://fullstack-todo-app-fwj6.onrender.com"]
 }))
 app.use(express.json());
 var indexRouter = require('./routes/index');
