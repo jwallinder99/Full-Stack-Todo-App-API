@@ -6,7 +6,9 @@ const mongoose = require("mongoose")
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var app = express();
-app.use(cors())
+app.use(cors({
+  origin: ["http://localhost:3000", "https://fullstack-todo-app.onrender.com"]
+}))
 app.use(express.json());
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -14,7 +16,6 @@ const tasksRouter = require('./routes/tasks')
 
 
 //get user model
-
 
 const uri = 
 'mongodb+srv://wallinderjames:Wallinder17a@myfirstcluster.lyp9vrj.mongodb.net/tododata'
